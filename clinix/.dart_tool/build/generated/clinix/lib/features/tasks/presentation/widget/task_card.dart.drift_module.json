@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/tasks/domain/entites/task.dart",
+    "package:flutter/material.dart"
+  ]
+}

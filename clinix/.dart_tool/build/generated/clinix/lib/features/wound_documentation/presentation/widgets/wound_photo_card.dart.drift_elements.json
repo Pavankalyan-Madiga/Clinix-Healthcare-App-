@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:flutter/material.dart","transitive":false},{"uri":"package:clinix/features/wound_documentation/data/model/wound_photo_model.dart","transitive":false},{"uri":"package:clinix/features/wound_documentation/presentation/widgets/wound_photo_image.dart","transitive":false}],"elements":[]}

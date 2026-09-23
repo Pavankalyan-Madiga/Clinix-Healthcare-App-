@@ -1,13 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 
 import '../../../providers/wound_photo_providers.dart';
 import '../data/model/wound_photo_model.dart';
+import '../data/wound_photo_storage.dart';
 import 'widgets/wound_photo_card.dart';
 
 class WoundPhotosPage extends ConsumerStatefulWidget {
@@ -28,6 +25,7 @@ class _WoundPhotosPageState
   final ImagePicker _picker = ImagePicker();
 
   List<WoundPhotoModel> _photos = [];
+
   bool _isLoading = true;
   bool _isCapturing = false;
   bool _showingNoteDialog = false;
@@ -39,9 +37,11 @@ class _WoundPhotosPageState
   }
 
   Future<void> _loadPhotos() async {
-    final repository = ref.read(woundPhotoRepositoryProvider);
+    final repository =
+        ref.read(woundPhotoRepositoryProvider);
 
-    final photos = await repository.getWoundPhotosByPatientId(
+    final photos =
+        await repository.getWoundPhotosByPatientId(
       widget.patientId,
     );
 
@@ -60,7 +60,9 @@ class _WoundPhotosPageState
   }
 
   Future<void> _capturePhoto() async {
-    if (_isCapturing || _showingNoteDialog || !mounted) {
+    if (_isCapturing ||
+        _showingNoteDialog ||
+        !mounted) {
       return;
     }
 
@@ -120,42 +122,18 @@ class _WoundPhotosPageState
         return;
       }
 
-      final documentsDirectory =
-          await getApplicationDocumentsDirectory();
-
-      final woundDirectory = Directory(
-        p.join(
-          documentsDirectory.path,
-          'wound_photos',
-        ),
-      );
-
-      if (!await woundDirectory.exists()) {
-        await woundDirectory.create(
-          recursive: true,
-        );
-      }
-
       final id =
           'WOUND-${DateTime.now().microsecondsSinceEpoch}';
 
-      final extension = p.extension(
-        pickedFile.path,
+      final savedPath = await saveWoundPhoto(
+        pickedFile,
+        id,
       );
-
-      final savedPath = p.join(
-        woundDirectory.path,
-        '$id$extension',
-      );
-
-      final savedFile = await File(
-        pickedFile.path,
-      ).copy(savedPath);
 
       final photo = WoundPhotoModel(
         id: id,
         patientId: widget.patientId,
-        filePath: savedFile.path,
+        filePath: savedPath,
         serverFilePath: '',
         note: '',
         capturedAt: DateTime.now(),
@@ -342,11 +320,9 @@ class _WoundPhotosPageState
         .read(woundPhotoRepositoryProvider)
         .deleteWoundPhoto(photo.id);
 
-    final file = File(photo.filePath);
-
-    if (await file.exists()) {
-      await file.delete();
-    }
+    await deleteWoundPhotoFile(
+      photo.filePath,
+    );
 
     if (!mounted) {
       return;
@@ -366,7 +342,8 @@ class _WoundPhotosPageState
         title: const Text('Wound Photos'),
       ),
       body: _buildBody(),
-      floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton:
+          FloatingActionButton.extended(
         onPressed:
             _isCapturing || _showingNoteDialog
                 ? null
@@ -439,8 +416,9 @@ class _WoundPhotosPageState
       separatorBuilder: (
         context,
         index,
-      ) =>
-          const SizedBox(height: 12),
+      ) {
+        return const SizedBox(height: 12);
+      },
       itemBuilder: (
         context,
         index,

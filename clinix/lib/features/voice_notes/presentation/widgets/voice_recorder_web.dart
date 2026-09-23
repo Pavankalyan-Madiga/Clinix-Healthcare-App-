@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:record/record.dart';
@@ -18,21 +20,30 @@ class VoiceRecorder extends StatefulWidget {
 class _VoiceRecorderState extends State<VoiceRecorder> {
   final AudioRecorder _recorder = AudioRecorder();
 
+  StreamSubscription<Uint8List>? _audioSubscription;
   Timer? _timer;
+
+  final List<int> _audioBytes = [];
 
   bool _isRecording = false;
   int _seconds = 0;
 
+  static const int _sampleRate = 44100;
+  static const int _channels = 1;
+  static const int _bitsPerSample = 16;
+
   @override
   void dispose() {
     _timer?.cancel();
+    _audioSubscription?.cancel();
     _recorder.dispose();
     super.dispose();
   }
 
   Future<void> _startRecording() async {
     try {
-      final hasPermission = await _recorder.hasPermission();
+      final hasPermission =
+          await _recorder.hasPermission();
 
       if (!hasPermission) {
         if (!mounted) return;
@@ -48,12 +59,25 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
         return;
       }
 
-      await _recorder.start(
+      _audioBytes.clear();
+
+      final stream = await _recorder.startStream(
         const RecordConfig(
-          encoder: AudioEncoder.wav,
-          sampleRate: 44100,
+          encoder: AudioEncoder.pcm16bits,
+          sampleRate: _sampleRate,
+          numChannels: _channels,
         ),
-        path: '',
+      );
+
+      _audioSubscription = stream.listen(
+        (data) {
+          _audioBytes.addAll(data);
+        },
+        onError: (error) {
+          debugPrint(
+            'Voice recording stream error: $error',
+          );
+        },
       );
 
       if (!mounted) return;
@@ -93,7 +117,10 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
 
       final duration = _seconds;
 
-      final path = await _recorder.stop();
+      await _recorder.stop();
+
+      await _audioSubscription?.cancel();
+      _audioSubscription = null;
 
       if (!mounted) return;
 
@@ -101,12 +128,29 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
         _isRecording = false;
       });
 
-      if (path != null && path.isNotEmpty) {
-        widget.onRecorded(
-          path,
-          duration,
+      if (_audioBytes.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'No audio data was recorded.',
+            ),
+          ),
         );
+
+        return;
       }
+
+      final wavBytes = _createWavFile(
+        Uint8List.fromList(_audioBytes),
+      );
+
+      final dataUrl =
+          'data:audio/wav;base64,${base64Encode(wavBytes)}';
+
+      widget.onRecorded(
+        dataUrl,
+        duration,
+      );
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -132,14 +176,115 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
     }
   }
 
+  Uint8List _createWavFile(Uint8List pcmData) {
+    final byteRate =
+        _sampleRate *
+        _channels *
+        (_bitsPerSample ~/ 8);
+
+    final blockAlign =
+        _channels *
+        (_bitsPerSample ~/ 8);
+
+    final fileSize = 36 + pcmData.length;
+
+    final buffer = ByteData(44);
+
+    buffer.setUint32(
+      0,
+      0x52494646,
+      Endian.big,
+    );
+
+    buffer.setUint32(
+      4,
+      fileSize,
+      Endian.little,
+    );
+
+    buffer.setUint32(
+      8,
+      0x57415645,
+      Endian.big,
+    );
+
+    buffer.setUint32(
+      12,
+      0x666d7420,
+      Endian.big,
+    );
+
+    buffer.setUint32(
+      16,
+      16,
+      Endian.little,
+    );
+
+    buffer.setUint16(
+      20,
+      1,
+      Endian.little,
+    );
+
+    buffer.setUint16(
+      22,
+      _channels,
+      Endian.little,
+    );
+
+    buffer.setUint32(
+      24,
+      _sampleRate,
+      Endian.little,
+    );
+
+    buffer.setUint32(
+      28,
+      byteRate,
+      Endian.little,
+    );
+
+    buffer.setUint16(
+      32,
+      blockAlign,
+      Endian.little,
+    );
+
+    buffer.setUint16(
+      34,
+      _bitsPerSample,
+      Endian.little,
+    );
+
+    buffer.setUint32(
+      36,
+      0x64617461,
+      Endian.big,
+    );
+
+    buffer.setUint32(
+      40,
+      pcmData.length,
+      Endian.little,
+    );
+
+    final result = BytesBuilder();
+
+    result.add(buffer.buffer.asUint8List());
+    result.add(pcmData);
+
+    return result.toBytes();
+  }
+
   String _formatDuration(int seconds) {
     final minutes = (seconds ~/ 60)
         .toString()
         .padLeft(2, '0');
 
-    final remainingSeconds = (seconds % 60)
-        .toString()
-        .padLeft(2, '0');
+    final remainingSeconds =
+        (seconds % 60)
+            .toString()
+            .padLeft(2, '0');
 
     return '$minutes:$remainingSeconds';
   }
@@ -220,7 +365,8 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
                     ? const Color(0xFFE04444)
                     : const Color(0xFF147DE5),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius:
+                      BorderRadius.circular(16),
                 ),
               ),
             ),

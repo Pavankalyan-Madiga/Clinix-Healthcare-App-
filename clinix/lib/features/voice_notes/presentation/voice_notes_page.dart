@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:clinix/features/voice_notes/data/audio_playback.dart';
 import 'package:clinix/features/voice_notes/data/model/voice_note_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,7 +38,9 @@ class _VoiceNotesPageState
 
     _playerStateSubscription =
         _audioPlayer.playerStateStream.listen((state) {
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
 
       setState(() {
         _isPlaying = state.playing;
@@ -92,8 +95,7 @@ class _VoiceNotesPageState
           widget.patientId,
         ),
         builder: (context, snapshot) {
-          final voiceNotes =
-              snapshot.data ?? [];
+          final voiceNotes = snapshot.data ?? [];
 
           return SingleChildScrollView(
             padding: const EdgeInsets.fromLTRB(
@@ -148,7 +150,9 @@ class _VoiceNotesPageState
         durationSeconds: durationSeconds,
       );
 
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -158,7 +162,9 @@ class _VoiceNotesPageState
         ),
       );
     } catch (e) {
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -187,8 +193,8 @@ class _VoiceNotesPageState
 
       await _audioPlayer.stop();
 
-      final duration =
-          await _audioPlayer.setFilePath(
+      final duration = await loadVoiceNote(
+        _audioPlayer,
         note.filePath,
       );
 
@@ -198,7 +204,9 @@ class _VoiceNotesPageState
         );
       }
 
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
 
       setState(() {
         _currentNoteId = note.id;
@@ -207,7 +215,9 @@ class _VoiceNotesPageState
 
       await _audioPlayer.play();
     } catch (e) {
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
 
       setState(() {
         _currentNoteId = null;
@@ -230,8 +240,7 @@ class _VoiceNotesPageState
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius:
-            BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: const Color(0xFFE8ECF2),
         ),
@@ -258,13 +267,13 @@ class _VoiceNotesPageState
         isCurrentNote && _isPlaying;
 
     return Container(
-      margin:
-          const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(
+        bottom: 12,
+      ),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius:
-            BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: const Color(0xFFE8ECF2),
         ),
@@ -272,13 +281,11 @@ class _VoiceNotesPageState
       child: Row(
         children: [
           GestureDetector(
-            onTap: () =>
-                _togglePlayback(note),
+            onTap: () => _togglePlayback(note),
             child: Container(
               width: 48,
               height: 48,
-              decoration:
-                  const BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFFEAF4FF),
                 shape: BoxShape.circle,
               ),
@@ -286,8 +293,7 @@ class _VoiceNotesPageState
                 isPlaying
                     ? Icons.pause
                     : Icons.play_arrow,
-                color:
-                    const Color(0xFF147DE5),
+                color: const Color(0xFF147DE5),
                 size: 26,
               ),
             ),
@@ -302,22 +308,16 @@ class _VoiceNotesPageState
                   'Voice Note',
                   style: TextStyle(
                     fontSize: 14,
-                    fontWeight:
-                        FontWeight.w600,
-                    color:
-                        Color(0xFF152A5B),
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF152A5B),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  _formatDate(
-                    note.createdAt,
-                  ),
-                  style:
-                      const TextStyle(
+                  _formatDate(note.createdAt),
+                  style: const TextStyle(
                     fontSize: 11,
-                    color:
-                        Color(0xFF667494),
+                    color: Color(0xFF667494),
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -325,11 +325,9 @@ class _VoiceNotesPageState
                   _formatDuration(
                     note.durationSeconds,
                   ),
-                  style:
-                      const TextStyle(
+                  style: const TextStyle(
                     fontSize: 11,
-                    color:
-                        Color(0xFF667494),
+                    color: Color(0xFF667494),
                   ),
                 ),
                 if (isPlaying) ...[
@@ -338,10 +336,8 @@ class _VoiceNotesPageState
                     'Playing',
                     style: TextStyle(
                       fontSize: 11,
-                      color:
-                          Color(0xFF147DE5),
-                      fontWeight:
-                          FontWeight.w500,
+                      color: Color(0xFF147DE5),
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -367,8 +363,7 @@ class _VoiceNotesPageState
 
   String _formatDuration(int seconds) {
     final minutes = seconds ~/ 60;
-    final remainingSeconds =
-        seconds % 60;
+    final remainingSeconds = seconds % 60;
 
     return '${minutes.toString().padLeft(2, '0')}:'
         '${remainingSeconds.toString().padLeft(2, '0')}';

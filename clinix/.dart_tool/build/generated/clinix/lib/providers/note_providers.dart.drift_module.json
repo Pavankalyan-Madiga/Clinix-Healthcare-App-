@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/providers/database_providers.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/features/notes/data/repositories/note_repository.dart"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/vital_dao.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/features/vitals/domain/entities/vital.dart",
+    "package:clinix/features/vitals/data/model/vital_model.dart"
+  ]
+}

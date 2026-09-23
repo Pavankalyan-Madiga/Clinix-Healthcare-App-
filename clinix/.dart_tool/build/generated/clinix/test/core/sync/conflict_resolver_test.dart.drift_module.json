@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/sync/conflict_resolver.dart",
+    "package:drift/drift.dart",
+    "package:drift/native.dart",
+    "package:flutter_test/flutter_test.dart"
+  ]
+}

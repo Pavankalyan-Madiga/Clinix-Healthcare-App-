@@ -1,0 +1,12 @@
+// ignore_for_file: type=lint
+mixin _$VoiceNoteDaoMixin on DatabaseAccessor<AppDatabase> {
+  $VoiceNotesTable get voiceNotes => attachedDatabase.voiceNotes;
+  VoiceNoteDaoManager get managers => VoiceNoteDaoManager(this);
+}
+
+class VoiceNoteDaoManager {
+  final _$VoiceNoteDaoMixin _db;
+  VoiceNoteDaoManager(this._db);
+  $$VoiceNotesTableTableManager get voiceNotes =>
+      $$VoiceNotesTableTableManager(_db.attachedDatabase, _db.voiceNotes);
+}

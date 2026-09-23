@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart"
+  ]
+}

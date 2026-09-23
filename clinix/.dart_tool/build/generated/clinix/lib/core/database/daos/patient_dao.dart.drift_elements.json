@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:drift/drift.dart","transitive":false},{"uri":"package:clinix/core/database/app_database.dart","transitive":false},{"uri":"package:clinix/core/database/tables/patients_table.dart","transitive":false}],"elements":[{"kind":"databaseAccessor","name":"PatientDao","dart_name":"PatientDao"}]}

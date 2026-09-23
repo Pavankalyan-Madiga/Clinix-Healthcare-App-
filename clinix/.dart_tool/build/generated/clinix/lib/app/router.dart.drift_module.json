@@ -1,0 +1,13 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/conflicts/conflicts_page.dart",
+    "package:flutter/material.dart",
+    "package:go_router/go_router.dart",
+    "package:clinix/features/auth/presentation/login_page.dart",
+    "package:clinix/features/auth/presentation/profile_page.dart",
+    "package:clinix/features/home/presentation/home_page.dart",
+    "package:clinix/features/more/presentation/settings_page.dart",
+    "package:clinix/features/more/presentation/about_page.dart"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/daos/sync_conflicts_dao.dart",
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart"
+  ]
+}

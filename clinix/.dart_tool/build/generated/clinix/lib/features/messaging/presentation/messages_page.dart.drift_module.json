@@ -1,0 +1,13 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/messaging/data/staff_directory.dart",
+    "package:clinix/providers/auth_providers.dart",
+    "package:clinix/providers/message_providers.dart",
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/features/messaging/data/domain/entites/message.dart",
+    "package:clinix/features/messaging/data/repositories/message_repository.dart",
+    "package:clinix/features/messaging/presentation/conversation_page.dart"
+  ]
+}

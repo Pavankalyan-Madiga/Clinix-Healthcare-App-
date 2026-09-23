@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:clinix/providers/database_providers.dart","transitive":false},{"uri":"package:flutter_riverpod/flutter_riverpod.dart","transitive":false},{"uri":"package:clinix/features/notes/data/repositories/note_repository.dart","transitive":false}],"elements":[]}

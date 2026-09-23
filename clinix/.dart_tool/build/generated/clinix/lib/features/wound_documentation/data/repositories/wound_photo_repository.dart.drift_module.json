@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/wound_photo_dao.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:drift/drift.dart",
+    "package:clinix/features/wound_documentation/data/model/wound_photo_model.dart"
+  ]
+}

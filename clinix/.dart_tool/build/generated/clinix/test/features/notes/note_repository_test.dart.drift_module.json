@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/features/notes/data/model/note_model.dart",
+    "package:clinix/features/notes/data/repositories/note_repository.dart",
+    "package:drift/native.dart",
+    "package:flutter_test/flutter_test.dart"
+  ]
+}

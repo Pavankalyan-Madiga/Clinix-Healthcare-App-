@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/auth_providers.dart",
+    "package:clinix/features/messaging/data/staff_directory.dart",
+    "package:clinix/features/messaging/data/staff_option.dart"
+  ]
+}

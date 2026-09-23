@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "TaskDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/task_dao.dart",
+        "name": "TaskDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/task_dao.dart",
+        "offset": 182,
+        "name": "TaskDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/tasks_table.dart",
+          "name": "tasks"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/tasks_table.dart",
+          "name": "tasks"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "TaskDao",
+            "import_uri": "package:clinix/core/database/daos/task_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/tasks_table.dart"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:shared_preferences/shared_preferences.dart",
+    "package:clinix/app/app.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/database_seed.dart",
+    "package:clinix/providers/auth_providers.dart",
+    "package:clinix/providers/database_providers.dart"
+  ]
+}

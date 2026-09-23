@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/widgets.dart",
+    "package:clinix/core/websocket/websocket_service.dart"
+  ]
+}

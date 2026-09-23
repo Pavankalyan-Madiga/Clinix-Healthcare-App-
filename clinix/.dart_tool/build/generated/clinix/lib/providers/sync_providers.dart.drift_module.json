@@ -1,0 +1,16 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/entity_versions_dao.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/core/network/connectivity_service.dart",
+    "package:clinix/core/sync/conflict_repository.dart",
+    "package:clinix/core/sync/conflict_resolver.dart",
+    "package:clinix/core/sync/sync_engine.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/core/sync/sync_repository.dart",
+    "package:clinix/features/voice_notes/data/repositories/voice_note_repository.dart"
+  ]
+}

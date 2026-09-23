@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:clinix/features/patients/domain/entities/patient.dart"
+  ]
+}

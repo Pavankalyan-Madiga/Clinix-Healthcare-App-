@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/lifecycle_providers.dart",
+    "package:clinix/providers/sync_providers.dart",
+    "package:clinix/providers/websocket_providers.dart",
+    "package:clinix/app/router.dart",
+    "package:clinix/app/theme.dart"
+  ]
+}

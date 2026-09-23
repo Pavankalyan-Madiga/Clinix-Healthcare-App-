@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/core/sync/sync_repository.dart",
+    "package:clinix/features/patients/data/model/patient_model.dart",
+    "package:clinix/features/patients/data/repositories/patient_repository.dart",
+    "package:drift/native.dart",
+    "package:flutter_test/flutter_test.dart"
+  ]
+}

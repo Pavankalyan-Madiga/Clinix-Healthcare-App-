@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:clinix/features/patients/domain/entities/patient.dart",
+    "package:clinix/features/notes/presentation/notes_page.dart",
+    "package:clinix/features/voice_notes/presentation/voice_notes_page.dart",
+    "package:clinix/features/vitals/presentation/vitals_page.dart",
+    "package:clinix/features/wound_documentation/presentation/wound_photos_page.dart"
+  ]
+}

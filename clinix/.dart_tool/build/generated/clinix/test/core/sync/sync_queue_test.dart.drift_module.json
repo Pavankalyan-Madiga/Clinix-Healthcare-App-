@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter_test/flutter_test.dart",
+    "package:drift/native.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/core/sync/sync_repository.dart"
+  ]
+}

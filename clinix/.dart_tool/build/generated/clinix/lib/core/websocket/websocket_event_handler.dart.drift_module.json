@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/core/websocket/websocket_service.dart",
+    "package:drift/drift.dart"
+  ]
+}

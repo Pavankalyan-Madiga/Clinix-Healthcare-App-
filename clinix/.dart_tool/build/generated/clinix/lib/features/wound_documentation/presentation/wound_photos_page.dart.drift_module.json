@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:image_picker/image_picker.dart",
+    "package:clinix/providers/wound_photo_providers.dart",
+    "package:clinix/features/wound_documentation/data/model/wound_photo_model.dart",
+    "package:clinix/features/wound_documentation/data/wound_photo_storage.dart",
+    "package:clinix/features/wound_documentation/presentation/widgets/wound_photo_card.dart"
+  ]
+}

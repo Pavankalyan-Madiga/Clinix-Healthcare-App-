@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:drift/drift.dart","transitive":false},{"uri":"package:clinix/core/database/app_database.dart","transitive":false},{"uri":"package:clinix/core/database/tables/wound_photos_table.dart","transitive":false}],"elements":[{"kind":"databaseAccessor","name":"WoundPhotoDao","dart_name":"WoundPhotoDao"}]}

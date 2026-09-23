@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:clinix/core/database/app_database.dart","transitive":false},{"uri":"package:clinix/core/network/api_client.dart","transitive":false},{"uri":"package:clinix/core/websocket/websocket_service.dart","transitive":false},{"uri":"package:drift/drift.dart","transitive":false}],"elements":[]}

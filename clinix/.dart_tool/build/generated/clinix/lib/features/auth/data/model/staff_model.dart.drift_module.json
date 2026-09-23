@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/auth/domain/entites/staff.dart"
+  ]
+}

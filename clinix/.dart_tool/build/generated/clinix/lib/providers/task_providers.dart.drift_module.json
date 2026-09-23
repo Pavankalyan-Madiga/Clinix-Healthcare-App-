@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/features/tasks/data/repositories/task_repository.dart",
+    "package:clinix/providers/database_providers.dart",
+    "package:clinix/providers/patient_providers.dart",
+    "package:clinix/providers/sync_providers.dart"
+  ]
+}

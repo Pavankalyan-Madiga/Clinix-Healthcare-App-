@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/voice_notes/data/audio_playback.dart",
+    "package:clinix/features/voice_notes/data/model/voice_note_model.dart",
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:just_audio/just_audio.dart",
+    "package:clinix/providers/sync_providers.dart",
+    "package:clinix/features/voice_notes/presentation/widgets/voice_recorder.dart"
+  ]
+}

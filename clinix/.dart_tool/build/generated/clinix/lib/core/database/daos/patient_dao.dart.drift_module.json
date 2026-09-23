@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "PatientDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/patient_dao.dart",
+        "name": "PatientDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/patient_dao.dart",
+        "offset": 191,
+        "name": "PatientDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/patients_table.dart",
+          "name": "patients"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/patients_table.dart",
+          "name": "patients"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "PatientDao",
+            "import_uri": "package:clinix/core/database/daos/patient_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/patients_table.dart"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/entity_versions_dao.dart",
+    "package:clinix/core/database/daos/patient_dao.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:drift/drift.dart",
+    "package:clinix/features/patients/data/model/patient_model.dart"
+  ]
+}

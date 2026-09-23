@@ -1,0 +1,15 @@
+{
+  "elements": {},
+  "imports": [
+    "package:drift/native.dart",
+    "package:flutter_test/flutter_test.dart",
+    "package:http/http.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/core/network/connectivity_service.dart",
+    "package:clinix/core/sync/conflict_repository.dart",
+    "package:clinix/core/sync/sync_engine.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/core/sync/sync_repository.dart"
+  ]
+}

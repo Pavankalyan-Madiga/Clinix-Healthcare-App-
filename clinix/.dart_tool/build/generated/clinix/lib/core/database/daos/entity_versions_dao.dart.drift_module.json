@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "EntityVersionsDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/entity_versions_dao.dart",
+        "name": "EntityVersionsDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/entity_versions_dao.dart",
+        "offset": 212,
+        "name": "EntityVersionsDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/entity_versions_table.dart",
+          "name": "entity_versions"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/entity_versions_table.dart",
+          "name": "entity_versions"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "EntityVersionsDao",
+            "import_uri": "package:clinix/core/database/daos/entity_versions_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/entity_versions_table.dart"
+  ]
+}

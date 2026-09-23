@@ -1,0 +1,171 @@
+{
+  "elements": {
+    "AppDatabase": {
+      "id": {
+        "library_uri": "package:clinix/core/database/app_database.dart",
+        "name": "AppDatabase"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/app_database.dart",
+        "offset": 1223,
+        "name": "AppDatabase"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/patients_table.dart",
+          "name": "patients"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/tasks_table.dart",
+          "name": "tasks"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/notes_table.dart",
+          "name": "notes"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_operations_table.dart",
+          "name": "sync_operations"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_conflicts_table.dart",
+          "name": "sync_conflicts"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/entity_versions_table.dart",
+          "name": "entity_versions"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/vitals_table.dart",
+          "name": "vitals"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/messages_table.dart",
+          "name": "messages"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/wound_photos_table.dart",
+          "name": "wound_photos"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/voice_notes_table.dart",
+          "name": "voice_notes"
+        }
+      ],
+      "type": "database",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/patients_table.dart",
+          "name": "patients"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/tasks_table.dart",
+          "name": "tasks"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/notes_table.dart",
+          "name": "notes"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_operations_table.dart",
+          "name": "sync_operations"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_conflicts_table.dart",
+          "name": "sync_conflicts"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/entity_versions_table.dart",
+          "name": "entity_versions"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/vitals_table.dart",
+          "name": "vitals"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/messages_table.dart",
+          "name": "messages"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/wound_photos_table.dart",
+          "name": "wound_photos"
+        },
+        {
+          "library_uri": "package:clinix/core/database/tables/voice_notes_table.dart",
+          "name": "voice_notes"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "schema_version": 9,
+      "daos": [
+        {
+          "library_uri": "package:clinix/core/database/daos/patient_dao.dart",
+          "name": "PatientDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/task_dao.dart",
+          "name": "TaskDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/notes_dao.dart",
+          "name": "NotesDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/sync_operations_dao.dart",
+          "name": "SyncOperationsDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/sync_conflicts_dao.dart",
+          "name": "SyncConflictsDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/entity_versions_dao.dart",
+          "name": "EntityVersionsDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/vital_dao.dart",
+          "name": "VitalDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/message_dao.dart",
+          "name": "MessageDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/wound_photo_dao.dart",
+          "name": "WoundPhotoDao"
+        },
+        {
+          "library_uri": "package:clinix/core/database/daos/voice_note_dao.dart",
+          "name": "VoiceNoteDao"
+        }
+      ],
+      "has_constructor_arg": false
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/database_connection.dart",
+    "package:clinix/core/database/daos/entity_versions_dao.dart",
+    "package:clinix/core/database/daos/message_dao.dart",
+    "package:clinix/core/database/daos/notes_dao.dart",
+    "package:clinix/core/database/daos/patient_dao.dart",
+    "package:clinix/core/database/daos/sync_conflicts_dao.dart",
+    "package:clinix/core/database/daos/sync_operations_dao.dart",
+    "package:clinix/core/database/daos/task_dao.dart",
+    "package:clinix/core/database/daos/vital_dao.dart",
+    "package:clinix/core/database/daos/voice_note_dao.dart",
+    "package:clinix/core/database/daos/wound_photo_dao.dart",
+    "package:clinix/core/database/tables/entity_versions_table.dart",
+    "package:clinix/core/database/tables/messages_table.dart",
+    "package:clinix/core/database/tables/notes_table.dart",
+    "package:clinix/core/database/tables/patients_table.dart",
+    "package:clinix/core/database/tables/sync_conflicts_table.dart",
+    "package:clinix/core/database/tables/sync_operations_table.dart",
+    "package:clinix/core/database/tables/tasks_table.dart",
+    "package:clinix/core/database/tables/vitals_table.dart",
+    "package:clinix/core/database/tables/voice_notes_table.dart",
+    "package:clinix/core/database/tables/wound_photos_table.dart"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/features/voice_notes/data/model/voice_note_model.dart"
+  ]
+}

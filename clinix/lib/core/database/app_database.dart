@@ -55,17 +55,23 @@ part 'app_database.g.dart';
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(openDatabaseConnection());
 
-  AppDatabase.forTesting(QueryExecutor executor) : super(executor);
+  AppDatabase.forTesting(QueryExecutor executor)
+      : super(executor);
 
   @override
   int get schemaVersion => 9;
 
   @override
-  MigrationStrategy get migration => MigrationStrategy(
+  MigrationStrategy get migration =>
+      MigrationStrategy(
         onCreate: (Migrator m) async {
           await m.createAll();
         },
-        onUpgrade: (Migrator m, int from, int to) async {
+        onUpgrade: (
+          Migrator m,
+          int from,
+          int to,
+        ) async {
           if (from < 2) {
             // Existing migration
           }
@@ -94,7 +100,9 @@ class AppDatabase extends _$AppDatabase {
           }
 
           if (from < 9) {
-            await m.createTable(voiceNotes);
+            await m.createTable(
+              voiceNotes,
+            );
           }
         },
       );

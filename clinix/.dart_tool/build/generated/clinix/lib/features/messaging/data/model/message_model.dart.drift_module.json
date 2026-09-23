@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/messaging/data/domain/entites/message.dart"
+  ]
+}

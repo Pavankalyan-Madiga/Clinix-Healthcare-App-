@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/sync/sync_repository.dart"
+  ]
+}

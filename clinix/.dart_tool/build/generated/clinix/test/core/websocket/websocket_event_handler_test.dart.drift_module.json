@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/core/websocket/websocket_event_handler.dart",
+    "package:clinix/core/websocket/websocket_service.dart",
+    "package:drift/native.dart",
+    "package:flutter_test/flutter_test.dart",
+    "package:http/http.dart"
+  ]
+}

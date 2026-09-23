@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 import '../../data/model/wound_photo_model.dart';
+import 'wound_photo_image.dart';
 
 class WoundPhotoCard extends StatelessWidget {
   final WoundPhotoModel photo;
@@ -23,21 +22,8 @@ class WoundPhotoCard extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 16 / 10,
-            child: Image.file(
-              File(photo.filePath),
-              fit: BoxFit.cover,
-              errorBuilder: (
-                context,
-                error,
-                stackTrace,
-              ) {
-                return const Center(
-                  child: Icon(
-                    Icons.broken_image_outlined,
-                    size: 48,
-                  ),
-                );
-              },
+            child: WoundPhotoImage(
+              filePath: photo.filePath,
             ),
           ),
           Padding(
@@ -103,12 +89,15 @@ class WoundPhotoCard extends StatelessWidget {
 
     final day =
         local.day.toString().padLeft(2, '0');
+
     final month =
         local.month.toString().padLeft(2, '0');
+
     final year = local.year;
 
     final hour =
         local.hour.toString().padLeft(2, '0');
+
     final minute =
         local.minute.toString().padLeft(2, '0');
 

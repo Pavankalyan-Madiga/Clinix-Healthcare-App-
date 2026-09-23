@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "VoiceNoteDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/voice_note_dao.dart",
+        "name": "VoiceNoteDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/voice_note_dao.dart",
+        "offset": 185,
+        "name": "VoiceNoteDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/voice_notes_table.dart",
+          "name": "voice_notes"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/voice_notes_table.dart",
+          "name": "voice_notes"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "VoiceNoteDao",
+            "import_uri": "package:clinix/core/database/daos/voice_note_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/voice_notes_table.dart"
+  ]
+}

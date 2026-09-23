@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/daos/notes_dao.dart",
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/features/notes/data/model/note_model.dart"
+  ]
+}

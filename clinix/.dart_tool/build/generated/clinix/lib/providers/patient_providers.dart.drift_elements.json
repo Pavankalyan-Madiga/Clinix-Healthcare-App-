@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:flutter_riverpod/flutter_riverpod.dart","transitive":false},{"uri":"package:clinix/features/patients/data/repositories/patient_repository.dart","transitive":false},{"uri":"package:clinix/providers/database_providers.dart","transitive":false},{"uri":"package:clinix/providers/sync_providers.dart","transitive":false}],"elements":[]}

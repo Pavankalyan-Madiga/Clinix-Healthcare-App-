@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:clinix/features/wound_documentation/data/model/wound_photo_model.dart",
+    "package:clinix/features/wound_documentation/presentation/widgets/wound_photo_image.dart"
+  ]
+}

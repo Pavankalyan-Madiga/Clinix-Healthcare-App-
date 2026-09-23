@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/message_dao.dart",
+    "package:clinix/core/sync/sync_queue.dart",
+    "package:clinix/features/messaging/data/domain/entites/message.dart",
+    "package:clinix/features/messaging/data/model/message_model.dart",
+    "package:drift/drift.dart"
+  ]
+}

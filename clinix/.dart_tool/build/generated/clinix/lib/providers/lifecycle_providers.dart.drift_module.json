@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/core/lifecycle/app_lifecycle_observer.dart",
+    "package:clinix/providers/websocket_providers.dart"
+  ]
+}

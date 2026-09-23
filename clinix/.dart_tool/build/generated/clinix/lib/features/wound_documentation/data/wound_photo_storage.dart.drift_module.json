@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/wound_documentation/data/wound_photo_storage_io.dart"
+  ]
+}

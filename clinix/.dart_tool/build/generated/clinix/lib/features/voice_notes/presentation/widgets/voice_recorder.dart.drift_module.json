@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/voice_notes/presentation/widgets/voice_recorder_io.dart"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/note_providers.dart",
+    "package:clinix/features/notes/data/model/note_model.dart",
+    "package:clinix/features/notes/presentation/add_note_page.dart",
+    "package:clinix/features/notes/presentation/widgets/note_card.dart"
+  ]
+}

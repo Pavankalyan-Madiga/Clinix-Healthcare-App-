@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "SyncOperationsDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/sync_operations_dao.dart",
+        "name": "SyncOperationsDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/sync_operations_dao.dart",
+        "offset": 198,
+        "name": "SyncOperationsDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_operations_table.dart",
+          "name": "sync_operations"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/sync_operations_table.dart",
+          "name": "sync_operations"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "SyncOperationsDao",
+            "import_uri": "package:clinix/core/database/daos/sync_operations_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/sync_operations_table.dart"
+  ]
+}

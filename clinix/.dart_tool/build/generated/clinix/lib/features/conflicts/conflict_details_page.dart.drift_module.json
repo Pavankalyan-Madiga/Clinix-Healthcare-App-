@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/providers/sync_providers.dart"
+  ]
+}

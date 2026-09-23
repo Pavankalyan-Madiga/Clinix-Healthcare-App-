@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/tasks/presentation/task_detail_page.dart",
+    "package:clinix/features/tasks/presentation/widget/task_card.dart",
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/task_providers.dart",
+    "package:clinix/features/tasks/data/model/task_model.dart",
+    "package:clinix/features/tasks/domain/entites/task.dart"
+  ]
+}

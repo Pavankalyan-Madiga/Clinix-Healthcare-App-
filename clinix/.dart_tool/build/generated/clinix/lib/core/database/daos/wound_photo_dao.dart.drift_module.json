@@ -1,0 +1,52 @@
+{
+  "elements": {
+    "WoundPhotoDao": {
+      "id": {
+        "library_uri": "package:clinix/core/database/daos/wound_photo_dao.dart",
+        "name": "WoundPhotoDao"
+      },
+      "declaration": {
+        "source_uri": "package:clinix/core/database/daos/wound_photo_dao.dart",
+        "offset": 202,
+        "name": "WoundPhotoDao"
+      },
+      "references": [
+        {
+          "library_uri": "package:clinix/core/database/tables/wound_photos_table.dart",
+          "name": "wound_photos"
+        }
+      ],
+      "type": "dao",
+      "tables": [
+        {
+          "library_uri": "package:clinix/core/database/tables/wound_photos_table.dart",
+          "name": "wound_photos"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "dart_type": {
+        "elements": [
+          {
+            "lexeme": "WoundPhotoDao",
+            "import_uri": "package:clinix/core/database/daos/wound_photo_dao.dart"
+          }
+        ]
+      },
+      "database": {
+        "elements": [
+          {
+            "lexeme": "AppDatabase",
+            "import_uri": "package:clinix/core/database/app_database.dart"
+          }
+        ]
+      }
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/tables/wound_photos_table.dart"
+  ]
+}

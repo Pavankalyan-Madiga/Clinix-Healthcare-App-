@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/features/messaging/data/repositories/message_repository.dart",
+    "package:clinix/providers/database_providers.dart",
+    "package:clinix/providers/sync_providers.dart"
+  ]
+}

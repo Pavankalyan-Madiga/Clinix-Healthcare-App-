@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:shared_preferences/shared_preferences.dart",
+    "package:clinix/features/auth/data/model/staff_model.dart"
+  ]
+}

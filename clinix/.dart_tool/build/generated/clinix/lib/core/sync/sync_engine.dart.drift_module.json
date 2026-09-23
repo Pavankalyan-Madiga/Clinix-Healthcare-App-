@@ -1,0 +1,13 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/core/database/app_database.dart",
+    "package:clinix/core/database/daos/entity_versions_dao.dart",
+    "package:clinix/core/network/api_client.dart",
+    "package:clinix/core/network/connectivity_service.dart",
+    "package:clinix/core/sync/conflict_repository.dart",
+    "package:clinix/core/sync/sync_repository.dart",
+    "package:clinix/features/sync/retry_policy.dart",
+    "package:drift/drift.dart"
+  ]
+}

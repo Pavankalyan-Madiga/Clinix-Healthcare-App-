@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/vital_providers.dart",
+    "package:clinix/features/vitals/data/model/vital_model.dart",
+    "package:clinix/features/vitals/domain/entities/vital.dart",
+    "package:clinix/features/vitals/presentation/widgets/vital_card.dart"
+  ]
+}

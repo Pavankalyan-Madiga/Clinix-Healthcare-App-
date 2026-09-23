@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/notes/domain/entites/note.dart"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/wound_documentation/presentation/widgets/wound_photo_image_io.dart"
+  ]
+}

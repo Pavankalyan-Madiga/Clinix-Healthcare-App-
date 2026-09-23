@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:flutter_riverpod/flutter_riverpod.dart","transitive":false},{"uri":"package:clinix/core/lifecycle/app_lifecycle_observer.dart","transitive":false},{"uri":"package:clinix/providers/websocket_providers.dart","transitive":false}],"elements":[]}

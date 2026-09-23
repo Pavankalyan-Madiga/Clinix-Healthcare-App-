@@ -1,0 +1,21 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/messaging/presentation/messages_page.dart",
+    "package:clinix/features/qr_scanner/presentation/qr_scanner_page.dart",
+    "package:clinix/features/tasks/presentation/tasks_page.dart",
+    "package:flutter/material.dart",
+    "package:flutter_riverpod/flutter_riverpod.dart",
+    "package:clinix/providers/database_providers.dart",
+    "package:clinix/providers/patient_providers.dart",
+    "package:clinix/shared/widgets/main_navigation.dart",
+    "package:clinix/features/auth/presentation/profile_page.dart",
+    "package:clinix/features/more/presentation/more_page.dart",
+    "package:clinix/features/notes/presentation/notes_page.dart",
+    "package:clinix/features/patients/presentation/patient_details_page.dart",
+    "package:clinix/features/patients/presentation/patients_page.dart",
+    "package:clinix/features/home/presentation/widgets/home_overview_card.dart",
+    "package:clinix/features/home/presentation/widgets/home_quick_action.dart",
+    "package:clinix/features/home/presentation/widgets/recent_patient_card.dart"
+  ]
+}

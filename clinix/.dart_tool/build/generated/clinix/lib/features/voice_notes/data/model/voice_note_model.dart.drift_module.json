@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:clinix/features/voice_notes/domain/voice_note.dart"
+  ]
+}
