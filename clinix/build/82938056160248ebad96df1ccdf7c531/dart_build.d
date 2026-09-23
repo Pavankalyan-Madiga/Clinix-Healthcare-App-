@@ -1,0 +1,1 @@
+ /home/pavankalyan/Documents/Clinix/clinix/build/82938056160248ebad96df1ccdf7c531/dart_build_result.json:  /home/pavankalyan/Documents/Clinix/clinix/.dart_tool/package_config.json /home/pavankalyan/Documents/Clinix/clinix/pubspec.yaml /home/pavankalyan/flutter/bin/cache/dart-sdk/version
