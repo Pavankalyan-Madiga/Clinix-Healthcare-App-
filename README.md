@@ -2,33 +2,6 @@
 
 Clinix is an offline-first clinical mobile platform designed for simulated healthcare staff. It enables staff to manage patients, clinical tasks, notes, voice notes, vitals, messaging, QR/barcode scanning, and wound documentation while continuing to work without network connectivity.
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Core Features](#core-features)
-- [Architecture](#architecture)
-- [Offline-First Data Flow](#offline-first-data-flow)
-- [Conflict Resolution Flow](#conflict-resolution-flow)
-- [WebSocket Recovery](#websocket-recovery)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Backend API](#backend-api)
-- [Database](#database)
-- [Running the Backend](#running-the-backend)
-- [Running the Flutter Application](#running-the-flutter-application)
-- [Building the Android APK](#building-the-android-apk)
-- [Building Flutter Web](#building-flutter-web)
-- [Docker](#docker)
-- [Authentication](#authentication)
-- [Testing](#testing)
-- [Production Build](#production-build)
-- [Documentation](#documentation)
-- [Demo](#demo)
-- [Security Considerations](#security-considerations)
-- [Scope and Limitations](#scope-and-limitations)
-- [AI Development Disclosure](#ai-development-disclosure)
-- [Project Deliverables](#project-deliverables)
-- [License](#license)
 
 ## Project Overview
 
@@ -298,14 +271,6 @@ Resume Real-Time Updates
 - REST API
 - WebSocket
 
-### DevOps
-
-- Docker
-- Docker Compose
-- Git
-- GitHub
-- CI/CD
-
 ## Project Structure
 
 ```
@@ -344,38 +309,6 @@ Clinix/
 +-- README.md
 +-- .gitignore
 ```
-
-## Backend API
-
-### Synchronization
-
-`POST /sync/operations`
-
-Processes queued client operations.
-
-### Conflict Resolution
-
-`POST /sync/resolve`
-
-Resolves detected synchronization conflicts.
-
-### Entity Retrieval
-
-`GET /sync/entities/{entity_type}/{entity_id}`
-
-Retrieves the current server state of an entity.
-
-### Change Recovery
-
-`GET /sync/changes`
-
-Returns changes required for recovery after connection loss.
-
-### WebSocket
-
-`WS /ws`
-
-Provides real-time server updates and reconnection support.
 
 ## Database
 
@@ -439,6 +372,15 @@ clinix/build/app/outputs/flutter-apk/app-release.apk
 ```
 
 The Android APK is the primary mobile application build for evaluation and demonstration.
+
+## Building Flutter Web
+
+```bash
+cd clinix
+flutter build web --release
+```
+
+
 
 ## Authentication
 
@@ -525,17 +467,6 @@ The project includes:
 - Project documentation
 - Known limitations
 
-## Documentation
-
-The project documentation includes:
-
-- Architecture Documentation
-- Testing Documentation
-- Final Project Report
-- AI Tools Documentation
-- Deployment Information
-- Known Limitations
-
 ## Demo
 
 The project demonstration covers:
@@ -614,7 +545,3 @@ The project deliverables include:
 - Final project report
 - AI tools documentation
 - Source code repository
-
-## License
-
-This project was developed as part of a Mobile Engineer Intern technical project submission.
