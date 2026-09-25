@@ -552,6 +552,6 @@ Developed by **Pavankalyan Madiga**
 
 Role : **Mobile Engineer Intern(Flutter)**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Pavankalyan-Madiga-black?style=flat&logo=github)](https://github.com/Pavankalyan-Madiga) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/pavankalyan-madiga/)
+[![GitHub](https://img.shields.io/badge/GitHub-Pavankalyan--Madiga-black?style=flat&logo=github)](https://github.com/Pavankalyan-Madiga) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/pavankalyan-madiga/)
 
 
