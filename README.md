@@ -545,3 +545,13 @@ The project deliverables include:
 - Final project report
 - AI tools documentation
 - Source code repository
+
+  ## 👨‍💻 Author
+
+Developed by **Pavankalyan Madiga**
+
+Role : **Mobile Engineer Intern(Flutter)**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Netturi--Pavankalyan-black?style=flat&logo=github)](https://github.com/Pavankalyan-Madiga) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/pavankalyan-madiga/))
+
+
